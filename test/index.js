@@ -26,6 +26,21 @@ describe('metalsmith-tags', function() {
       });
   });
 
+  it('should modify space separated tags into dehumanized array', function(done) {
+    Metalsmith('test/fixtures')
+      .source('altsrc')
+      .use(tags({
+        handle: 'tags',
+        delimiter: /\s+/,
+        path:'topics'
+      }))
+      .build(function(err,files){
+        if (err) return done(err);
+        assert.equal(files['space.html'].tags.toString(),['good-bye', 'spaces'].toString());
+        done();
+      });
+  });
+
   it('should create a tags property to metalsmith.metadata', function(done) {
     var tagList;
 
