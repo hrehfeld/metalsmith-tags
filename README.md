@@ -1,10 +1,10 @@
-# metalsmith-tags
+# metalsmith-tags-list
 
   A metalsmith plugin to create dedicated pages for tags in provided in metalsmith pages.
 
 ## Installation
 
-    $ npm install metalsmith-tags
+    $ npm install metalsmith-tags-list
 
 ## Description in Pages
 
@@ -19,6 +19,8 @@ tags: tagged, page, metalsmith, plugin
 Hello World
 ```
 
+Then split the string data in the field using metalsmith-metadata-as-list. 
+
 You can use different handle for the tags, by configuring the `handle` option. `tags` is the default.
 
 
@@ -29,7 +31,7 @@ You can use different handle for the tags, by configuring the `handle` option. `
 ```json
 {
   "plugins": {
-    "metalsmith-tags": {
+    "metalsmith-tags-list": {
       "handle": "tags",
       "path": "topics/:tag.html",
       "template": "/partials/tag.hbt",
@@ -45,7 +47,7 @@ You can use different handle for the tags, by configuring the `handle` option. `
   Pass the plugin to `Metalsmith#use`:
 
 ```js
-var tags = require('metalsmith-tags');
+var tags = require('metalsmith-tags-list');
 
 metalsmith
     .use(tags({
@@ -60,8 +62,6 @@ metalsmith
 ## Result
 
   This will generate `topics/[tagname].html` pages in your `build` directory with array of `pagination.files` objects on which you can iterate on. You can use `tag` for tag name in your templates. (You can refer to tests folder for tags template.)
-
-  The `tags` property on your pages will remain but it will be modified to an array of String containing the tags.
 
   You can use `metalsmith-permalink` to customize the permalink of the tag pages as you would do with anything else.
 
@@ -92,6 +92,8 @@ metalsmith
   Issues, suggestions and bugs are more than welcome.
 
   In case you add functionality, please write corresponding test. Test using `npm test`.
+
+  hrehf: Sorry, I didn't.
 
   Thanks!
 

@@ -1,6 +1,6 @@
 {
-  "name": "metalsmith-tags",
-  "version": "0.8.2",
+  "name": "metalsmith-tags-list",
+  "version": "0.1.0",
   "description": "A metalsmith plugin to create dedicated pages for tags in posts or pages.",
   "main": "lib/index.js",
   "scripts": {
@@ -8,25 +8,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/totocaster/metalsmith-tags"
+    "url": "https://github.com/hrehfeld/metalsmith-tags"
   },
   "keywords": [
     "metalsmith",
     "plugin",
     "tags"
   ],
-  "author": "Toto Tvalavadze <toto@totocaster.com>",
+  "author": "Hauke Rehfeld",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/totocaster/metalsmith-tags/issues"
+    "url": "https://github.com/hrehfeld/metalsmith-tags/issues"
   },
-  "homepage": "https://github.com/totocaster/metalsmith-tags",
+  "homepage": "https://github.com/hrehfeld/metalsmith-tags",
   "devDependencies": {
-    "assert-dir-equal": "0.0.1",
-    "handlebars": "*",
     "metalsmith": "1.x",
-    "metalsmith-templates": "~0.6.0",
     "mocha": "1.x",
-    "moment": "^2.7.0"
   }
 }
